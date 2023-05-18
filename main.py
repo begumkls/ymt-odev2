@@ -62,7 +62,9 @@ def main():
             havuzEn = int(input("Havuzun en uzunluğunu giriniz: "))
             havuzBoy = int(input("Havuzun boy uzunluğunu giriniz: "))
             havuzDerinlik = int(input("Havuzun derinlik uzunluğunu giriniz: "))
-            havuzMaliyet = havuzEn*havuzBoy*havuzDerinlik*1000
+            adet = int(input("Lutfen kac adet havuz yaptırmak isteginizi giriniz.."))
+            print("Lutfen nerede havuz yaptıracagınızı seciniz...")
+            havuzMaliyet = havuzEn*havuzBoy*havuzDerinlik*adet*1000
             print(f"Havuzun maliyeti {havuzMaliyet:.2f} türk lirasıdır")
             
         elif secim == 4:
