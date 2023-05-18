@@ -1,8 +1,8 @@
 # arsa.py
 # değişken global olacak şekilde atandı
-denizKenari = 1.6
-sehirMerkezi = 1.2
-kirsal = 0.8
+denizKenari = 2
+sehirMerkezi = 1.5
+kirsal = 0.5
 arsaBolge=0
 def cember(r): # main.py modülünde kullanıcıdan alınan r değişkenine göre çember çevresini hesaplayan fonksiyon
     return 2*3.14*r
