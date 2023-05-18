@@ -7,7 +7,8 @@ def secimEkrani():
     print()
     print("1. Arsa")
     print("2. Daire")
-    print("3. Çıkış yapmak için h ya da H tuşlayınız..")
+    print("3. Havuz")
+    print("4. Çıkış yapmak için h ya da H tuşlayınız..")
     print()
 # işlemler main fonksiyonunda yapıldı.   
 def main():
@@ -56,8 +57,15 @@ def main():
             else:
                 print()
                 print(f"Seçmiş olduğunuz daire fiyatı: {fiyat:.2f} türk lirası")
-            
+                
         elif secim == 3:
+            havuzEn = int(input("Havuzun en uzunluğunu giriniz: "))
+            havuzBoy = int(input("Havuzun boy uzunluğunu giriniz: "))
+            havuzDerinlik = int(input("Havuzun derinlik uzunluğunu giriniz: "))
+            havuzMaliyet = havuzEn*havuzBoy*havuzDerinlik*1000
+            print(f"Havuzun maliyeti {havuzMaliyet:.2f} türk lirasıdır")
+            
+        elif secim == 4:
             cikis = input("Fiyat hesaplama işlemine devam etmek ister misiniz? (e/E/h/H) h/H tuşlanması durumunda program sonlandırılacak...: ")
             # while yardımıyla kullanıcının işleme devam edip etmeyeceği sorgulandı
             while cikis not in ["e", "E", "h", "H"]: # kullanıcı "e", "E", "h", "H" tuşlarından biri tuşlamazsa döngü tekrar eder.
