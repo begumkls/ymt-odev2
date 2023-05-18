@@ -5,8 +5,8 @@ import arsa
 # kullanıcıya kolaylık sağlamak adına bir seçim ekranı oluşturuldu.
 def secimEkrani():
     print()
-    print("1. Arsa")
-    print("2. Daire")
+    print("1. Daire")
+    print("2. Arsa")
     print("3. Havuz")
     print("4. Çıkış yapmak için h ya da H tuşlayınız..")
     print()
@@ -19,6 +19,19 @@ def main():
         secim = int(input("Lütfen fiyat hesaplaması yapmak için bir 1 ya da 2 olacak şeklinde tuşlama yapınız: "))
         # Kullanıcının seçimine göre if else blokları ile işleme devam edildi.
         if secim == 1:
+            en=int(input("Dairenin enini giriniz: " ))
+            boy=int(input("Dairenin boyunu giriniz: "))
+            alan = daire.daireMetrekare(en,boy) # daire.py modülündeki daireMetrekare fonksiyonu yardımıyla daire alanı hesaplandı.
+            a = int(input("ara kat için 1, üst kat için 2, zemin kat için 3'ü tuşlayınız: "))
+            fiyat = daire.daireFiyat(a,alan) # kullanıcının kat girdisine göre daire fiyatı hesaplandı.
+            
+            if fiyat is None:
+                continue # kullanıcı hatalı giriş yaptığı için işlem en başa alındı.
+            else:
+                print()
+                print(f"Seçmiş olduğunuz daire fiyatı: {fiyat:.2f} türk lirası")
+            
+        elif secim == 2:
             print()
             sekil = int(input("Arsa şeklini dikdörtgen istiyorsanız 1, çember istiyorsanız 2 tuşlayınız: "))
             print()
@@ -44,19 +57,6 @@ def main():
             else:
                 print()
                 print(f"Arsa için fiyat: {fiyat:.2f}") 
-            
-        elif secim == 2:
-            en=int(input("Dairenin enini giriniz: " ))
-            boy=int(input("Dairenin boyunu giriniz: "))
-            alan = daire.daireMetrekare(en,boy) # daire.py modülündeki daireMetrekare fonksiyonu yardımıyla daire alanı hesaplandı.
-            a = int(input("ara kat için 1, üst kat için 2, zemin kat için 3'ü tuşlayınız: "))
-            fiyat = daire.daireFiyat(a,alan) # kullanıcının kat girdisine göre daire fiyatı hesaplandı.
-            
-            if fiyat is None:
-                continue # kullanıcı hatalı giriş yaptığı için işlem en başa alındı.
-            else:
-                print()
-                print(f"Seçmiş olduğunuz daire fiyatı: {fiyat:.2f} türk lirası")
                 
         elif secim == 3:
             havuzEn = int(input("Havuzun en uzunluğunu giriniz: "))
