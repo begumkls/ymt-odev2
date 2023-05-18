@@ -5,10 +5,12 @@ sehirMerkezi = 1.2
 kirsal = 0.8
 arsaBolge=0
 def cember(r): # main.py modülünde kullanıcıdan alınan r değişkenine göre çember çevresini hesaplayan fonksiyon
-    return 2*3.14*r
+    cemberHesabi = 2*3.14*r
+    return cemberHesabi
 
 def dikdortgen(en,boy):  #  main.py modülünde kullanıcıdan alınan en ve boy değişkenlerine göre dikdörtgen çevresini hesaplayan fonksiyon
-    return 2*(en+boy)
+    dikdortgenHesabi = 2*(en+boy)
+    return dikdortgenHesabi
 
 def arsaFiyat(bolge,cevre):  # main.py modülünde kullanıcıdan alınan bolge değişkenine göre bolge ve cevre parametreleri yardımıyla
     # arsa fiyatını yazdıran fonksiyon
