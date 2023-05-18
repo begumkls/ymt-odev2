@@ -1,8 +1,8 @@
 # daire.py
 # kat değerleri değişkenlere atanır.
-araKat = 2
+araKat = 3
 ustKat = 1.6
-zeminKat = 0.9
+zeminKat = 1
 
 def daireMetrekare(en,boy): # main.py modülünde kullanıcının girdiği en boy bilgiisne göre alan hesaplayan fonksiyon
     daireMetrekareHesabi = en*boy
